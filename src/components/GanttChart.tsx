@@ -87,7 +87,8 @@ const GanttChart = ({ data, title }: Props) => {
       }
       const params = {
         id: _id,
-        parent: `parent_${flightId}`,
+        planeName: planeId,
+        // parent: `parent_${flightId}`,
         text,
         start_date: new Date(departureTime),
         end_date: new Date(arrivalTime),
@@ -114,16 +115,16 @@ const GanttChart = ({ data, title }: Props) => {
 
         if (tempList.length > 1) {
           const { planeId, flightId } = tempList[0];
-          const parent: TGanttData = {
-            id: `parent_${flightId}`,
-            planeName: planeId,
-            render: "split",
-            text: planeId,
-            type: "project",
-            color: "#F56C6C",
-            open: true,
-          };
-          gantteData.push(parent);
+          // const parent: TGanttData = {
+          //   id: `parent_${flightId}`,
+          //   planeName: planeId,
+          //   render: "split",
+          //   text: planeId,
+          //   type: "project",
+          //   color: "#F56C6C",
+          //   open: true,
+          // };
+          // gantteData.push(parent);
           const tempGenerateData = generateData(tempList);
           gantteData.push(...tempGenerateData);
         } else {

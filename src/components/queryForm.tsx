@@ -134,8 +134,7 @@ export default function queryForm({
                 onChange={(e) => {
                   handleChange(item, e.target.value);
                 }}
-                // value={formik.values[item.value]}
-                placeholder="default size"
+                {...item.comProps}
               />
             );
           }
@@ -147,7 +146,6 @@ export default function queryForm({
                   handleChange(item, e);
                 }}
                 value={formik.values[item.value]}
-                placeholder="default size"
                 {...item.comProps}
               />
             );

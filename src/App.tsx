@@ -12,8 +12,6 @@ const layoutStyle = {
   borderRadius: 8,
   height: "100vh",
   overflow: "hidden",
-  // width: "calc(50% - 8px)",
-  // maxWidth: "calc(50% - 8px)",
 };
 
 const siderStyle: React.CSSProperties = {
@@ -33,7 +31,7 @@ const headerStyle: React.CSSProperties = {
 };
 
 const contentStyle: React.CSSProperties = {
-  margin: "20px 0 0 20px",
+  margin: "20px 20px 0 20px",
 };
 
 function App() {
